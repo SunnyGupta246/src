@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+     
+    content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="colour.css">
+    
+    <title>Payment form</title>
+    <style>
+      
+      .background{
+            background-image:url("photo-1519744792095-2f2205e87b6f.jpg");
+            background-repeat: no-repeat;
+            background-size: 2350px;
+            background-attachment: fixed;
+            background-position: center;
+            width: 1500px;
+            height: 1500px;
+        }
+    </style>
+        
+  </head>
+  
+
+  <body>
+    <form action="">
+      <div class="background">
+        <h1 style="color: blue;"></h1>
+      
+     
+
+      <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; display: block; text-align: center; font-size: 40px;text-decoration: underline;color: rgba(234, 251, 2, 0.678);text-decoration-thickness: 5px;">Payment form</h1>
+      <h2 style="font-size: 30px; text-decoration: underline; text-decoration-thickness: 2px;">Contact form:</h2>
+      <p>Name*: <input type="text" name="name" required</p>
+      <p>
+          <fieldset>
+            <legend>Gender*</legend>
+        Male <input type="radio" name="gender" id="male" required /> 
+        Female <input type="radio" name="gender" 
+        id="female" required/>
+      </p>
+    </fieldset>
+    <p>Adderess: <textarea name="address" id="address" cols="100" rows="8"></textarea></p>
+  <p>Email: <input type="email" name="email" id="email"></p>    
+  <p>Pincode: <input type="number" name="pincode" id="pincode"></p>
+  <hr>
+  <h2 style="font-size: 30px;text-decoration: underline; text-decoration-thickness: 2px;">Payment information:</h2>
+  <p>Card Type*:
+    <select name="card_type" id="card_type">
+      <option value="">--Select a Card type--</option>
+      <option value="visa">Visa</option>
+      <option value="rupee">Rupee</option>
+      <option value="mastercard">Mastercard</option>
+
+      
+    </select>
+  </p>
+  <p>
+    Card Number <input type="number" name="card_number " id="card_number">
+  </p>
+  <p>
+    Exepiering date <input type="date" name="exp" id="exp">
+  </p>
+  <p> CVV <input type="password" name="CVV" id="CVV">
+  </p>
+  <input type="submit" value="Pay now">
+  </form>
+    </form>
+  </body>
+</html>

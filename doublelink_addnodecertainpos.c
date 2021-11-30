@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct node
+{
+    struct node *prev;
+    int data;
+    struct node *next;
+};
+struct node *addtoempty(struct node *head, int data);
+struct node *addtobegining(struct node *head, int data);
+struct node *addtoend(struct node *head, int data);
+struct node *certain(struct node *head,int data);
+
+
+int main()
+{
+    struct node *ptr;
+    struct node *head = NULL;
+    head = addtoempty(head, 45);
+    head = addtobegining(head, 34);
+    head = addtoend(head, 9);
+    certain(head,3);
+    ptr = head;
+    while (ptr != NULL)
+    {
+        printf("%d\t", ptr->data);
+        ptr = ptr->next;
+    }
+
+    return 0;
+}
+struct node *addtoempty(struct node *head, int data)
+{
+    struct node *temp = malloc(sizeof(struct node));
+    temp->prev = NULL;
+    temp->data = data;
+    temp->next = NULL;
+    head = temp;
+    return head;
+}
+
+struct node *addtobegining(struct node *head, int data)
+{
+    struct node *temp = malloc(sizeof(struct node));
+    temp->prev = NULL;
+    temp->data = data;
+    temp->next = NULL;
+    temp->next = head;
+    head->prev = temp;
+    head = temp;
+    return head;
+}
+
+struct node *addtoend(struct node *head, int data)
+{
+    struct node *temp = malloc(sizeof(struct node));
+    temp->next = NULL;
+    temp->data = 9;
+    temp->prev = head->next;
+    head->next->next = temp;
+    return head;
+}
+struct node *certain(struct node *head,int data)
+{
+    struct node *heap=malloc(sizeof(struct node ));
+    heap->next=head->next->next;
+    head->next->next->prev=heap;
+    heap->prev=head->next;
+    heap->data=data;
+    head->next->next=heap;
+    return head;
+}
