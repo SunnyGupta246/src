@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=["sanjay","Aman","Rehaman"];
+        var b= 20;
+        var c ="Rahul";
+        var m =Array.isArray(a)
+        document.write("is Array function : " +m +"<br>")
+        var z=a.indexOf("Aman");
+        document.write(z+"<br>");
+        var p=a.lastIndexOf("Rehaman");
+        document.write(p +"<br>");
+        var k=a.includes("Aman");
+        document.write(k+"<br>");
+        var t=[10,13,19,20];
+        
+        var o=t.some(adult);
+        document.write(o+"<br>");
+
+        function adult(t)
+        {
+            return t>=18;
+        }
+        var y=t.find(checkadult)  //findIndex()
+        document.write(y+"<br>")
+        function checkadult(t)
+        {
+            return t>=18
+        }
+        var j=t.filter(allage);
+        document.write(j+"<br>");
+        function allage(t){
+            return t>=18;
+        }
+        a.toString();
+        document.write(a+"<br>")
+        a.fill("Ram");
+        document.write(a+"<br>")
+
+        a.forEach(loop);
+
+        function loop(value, index)
+        {
+            document.write(index +" :" +value+"<br>")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

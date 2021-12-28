@@ -1,29 +1,28 @@
 #include <stdio.h>
 int main()
 {
-    int max, n, i, count=0, a[100];
-    scanf("%d\n", &n);
-    for (i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
-    }
-    max = a[1];
-    for (i = 0; i < n; i++)
-    {
-        if (max < a[i])
-        {
-            max = a[i];
-        }
-    }
+    int n, count = 0;
+    printf("Enter the number \n");
+    scanf("%d", &n);
 
-    for (i = 0; i < n; i++)
-    {
-        if (max == a[i])
+
+        for (int i = 1; i <= n; i++)
         {
-            count++;
+
+            if (n % i == 0)
+            {
+                count++;
+            }
         }
-    }
-    printf("%d", count);
+        if (count == 2)
+        {
+            printf("Number is prime \n");
+        }
+        else
+        {
+            printf("Number is not prime \n");
+        }
+    
 
     return 0;
 }

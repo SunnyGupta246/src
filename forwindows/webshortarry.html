@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script>
+        var a = ["Sanjay", "Sunny", "Rhaman", "karan"];
+        var b = a.concat(34, 35, 777, 7);
+        var c = ["Sanjay", "Sunny", "Rhaman", "karan", "Raj"];
+        document.write("simple array :" + a + "<br>")
+
+        a.sort();
+        document.write("sort arry :" + a + "<br>")
+        a.reverse()
+        document.write("reverse array :" + a + "<br>")
+        a.pop();
+        document.write("pop : " + a + "<br>")
+        a.push("khan");
+        document.write("push function :" + a + "<br>")
+        a.shift();
+        document.write("shift function " + a + "<br>")
+        a.unshift("aman");
+        document.write("unshift function : " + a + "<br>")
+
+        document.write("concat function : " + b + "<br>")
+
+        var m = a.join(" // ");
+        document.write("Join function : "+m+"<br>")
+        var z=b.slice(0,5);
+        document.write("slice function :"+ z+"<br>")
+
+        b.splice(2,0,"Neha","Karan");
+        document.write("splic function  : "+b);
+
+
+
+    </script>r
+</head>
+
+<body>
+
+</body>
+
+</html>

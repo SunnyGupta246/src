@@ -1,4 +1,1 @@
- for (i = 0; i < width; i++)
-    {
-        for (j = 0; j < hight; j++)
-        {
+Welcome to 30 Days of Code!

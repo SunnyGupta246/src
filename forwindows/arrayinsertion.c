@@ -8,7 +8,7 @@ void display(int arr[], int n)
     }
     printf("\n");
 }
-void shorted(int arr[],int size,int element,int capacity,int index)
+int shorted(int arr[],int size,int element,int capacity,int index)
 {
     if (size>=capacity)
     {
